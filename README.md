@@ -7,3 +7,41 @@ Imagine the PokeDex Ash used to carry around in his pocket 🤔
 ![](https://img.rankedboost.com/wp-content/uploads/2017/09/Pokemon-GO-GEN-4-Pokedex.png)
 
 We are gonna build this! Not exactly like above, but an app that Ash would have used if Pokemon started airing in 2021.
+
+
+## Guidelines
+### Ways to clone and build the app
+
+1. Clone the repository
+   
+       https://github.com/infiniteoverflow/PokeDex.git
+
+2. Get packages
+
+        flutter pub get       
+
+3. Build app
+        
+        flutter run
+
+4. Create a new branch
+
+        git checkout -b add "your branch name"
+
+5. Make the changes in the code
+
+6. Commit your changes along with a commit message
+
+        git commit -m "A relevant message"
+
+7. Push your code to your branch
+    
+        git push -u origin <your-branch-name>
+
+8. To create a pull request, click on `Compare and pull request`
+
+9. Add an appropiate title and description to your pull request explaining the changes made
+
+10. Click on `create pull request`
+
+11. You have successfully raised a pull request ! 
