@@ -5,13 +5,15 @@ class Pokemon {
   Pokemon({required this.name, required this.detailsUrl});
 
   factory Pokemon.fromJSON(Map<String, dynamic> json) {
-    return Pokemon(name: json["name"], detailsUrl: json["url"]);
+    return Pokemon(
+        name: json["name"] ?? null as String,
+        detailsUrl: json["url"] ?? null as String);
   }
 }
 
 class Pokemons {
-  final String next;
-  final String prev;
+  final String? next;
+  final String? prev;
 
   final List<Pokemon> pokemonsListPerPage;
 
@@ -22,9 +24,9 @@ class Pokemons {
 
   factory Pokemons.fromJSON(Map<String, dynamic> json) {
     return Pokemons(
-        next: json["next"] as String,
-        prev: json["prev"] as String,
-        pokemonsListPerPage: json["result"]
+        next: json["next"] ?? null,
+        prev: json["prev"] ?? null,
+        pokemonsListPerPage: json["results"]
             .map<Pokemon>((data) => Pokemon.fromJSON(data))
             .toList() as List<Pokemon>);
   }

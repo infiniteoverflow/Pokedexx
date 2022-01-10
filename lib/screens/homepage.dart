@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pokedex/models/pokemons.dart';
+import 'package:pokedex/services/fetchApi.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -6,6 +8,28 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  @override
+  void initState() {
+    // req();
+    super.initState();
+  }
+
+  /*
+  testing data fetching
+  void req() async {
+    Pokemons? pokemon = await FetchApi().fetchPokemons();
+    if (pokemon != null) {
+      print(pokemon.next);
+      print(pokemon.prev);
+      print(pokemon.pokemonsListPerPage.length);
+      pokemon.pokemonsListPerPage.forEach((element) {
+        print(element.name);
+        print(element.detailsUrl);
+      });
+    }
+  }
+  */
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
